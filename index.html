@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        {{frutas[2]}}
+        <ul>
+            <li v-for="fruta of frutas">
+                {{fruta.estado}}
+            </li>
+        </ul>
+        <select>
+            <option v-for="fruta of frutas" :value=fruta.nombre :selected=fruta.estado=='true'>{{fruta.nombre}}</option>
+        </select>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="src/index.js"></script>
+</body>
+</html>
